@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="theme-color" content="#006A4E"/>
+<meta name="description" content="Cockroach Jonota Party Bangladesh — Voice of the Lazy & Unemployed. A movement for human rights, real democracy, and a better Bangladesh."/>
+<title>Cockroach Jonota Party Bangladesh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Bengali:wght@400;600;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --green:#006A4E;
+  --green-dark:#004d38;
+  --green-mid:#008560;
+  --red:#C8102E;
+  --red-dark:#9b0c22;
+  --red-light:#e8213f;
+  --gold:#E8B84B;
+  --gold-dark:#c99a30;
+  --cream:#F7F2E6;
+  --off-white:#EEE8D6;
+  --dark:#0e0e0e;
+  --text:#1a1a1a;
+  --muted:#5a5a5a;
+  --border:rgba(0,0,0,0.08);
+  --font-display:"Bebas Neue",sans-serif;
+  --font-serif:"Instrument Serif",serif;
+  --font-sans:"DM Sans","Noto Sans Bengali",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.65}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+.container{max-width:1100px;margin:0 auto;padding:0 1.75rem}
+.section-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.65rem}
+.section-title{font-family:var(--font-display);font-size:clamp(44px,7vw,76px);letter-spacing:.02em;line-height:.92;color:var(--green-dark);margin-bottom:1rem}
+.section-sub{font-family:var(--font-serif);font-size:clamp(15px,2vw,18px);color:var(--muted);max-width:640px;line-height:1.8;margin-bottom:2.5rem}
+.flag-divider{height:6px;display:flex}
+.flag-divider .gd{flex:1;background:var(--green)}
+.flag-divider .rd{flex:1;background:var(--red)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+.ticker-wrap{background:var(--green-dark);color:rgba(255,255,255,.78);font-size:11.5px;letter-spacing:.07em;overflow:hidden;white-space:nowrap;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.ticker-inner{display:inline-flex;animation:tick 45s linear infinite}
+.ticker-inner span{margin:0 2rem;display:flex;align-items:center;gap:.5rem}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+nav{
+  position:sticky;top:0;z-index:200;
+  background:var(--green);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;
+  box-shadow:0 3px 20px rgba(0,0,0,.32);
+  border-bottom:3px solid var(--gold);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;padding:10px 0;transition:opacity .2s}
+.nav-logo:hover{opacity:.85}
+.nav-logo img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.nav-logo-text{font-family:var(--font-display);font-size:17px;color:var(--gold);letter-spacing:.1em;line-height:1.1}
+.nav-logo-text small{display:block;font-size:9px;color:rgba(255,255,255,.5);letter-spacing:.12em;font-family:var(--font-sans);font-weight:500;text-transform:uppercase;margin-top:1px}
+.nav-links{list-style:none;display:flex;gap:0}
+.nav-links a{display:block;padding:18px 14px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.8);transition:background .2s,color .2s;letter-spacing:.03em}
+.nav-links a:hover{background:rgba(0,0,0,.18);color:var(--gold)}
+.nav-cta{background:var(--red)!important;color:#fff!important;border-radius:4px;margin-left:8px;padding:12px 18px!important}
+.nav-cta:hover{background:var(--red-dark)!important;color:#fff!important}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.ham span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+
+.hero{background:var(--green);color:#fff;position:relative;overflow:hidden;padding:5.5rem 2rem 4.5rem;}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(0,0,0,.03) 40px,rgba(0,0,0,.03) 41px);pointer-events:none;}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(0,0,0,.15) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);border-radius:50px;font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7);padding:6px 16px;margin-bottom:1.75rem;}
+.hero-badge::before{content:"🪳";font-size:13px}
+.hero-h1{font-family:var(--font-display);font-size:clamp(56px,9vw,108px);line-height:.88;letter-spacing:.02em;margin-bottom:1.4rem;}
+.hero-h1 .gold{color:var(--gold)}
+.hero-h1 .red-w{display:block;color:var(--red-light);-webkit-text-stroke:1px rgba(255,255,255,.15);font-size:.62em;margin-top:.05em;}
+.hero-p{font-family:var(--font-serif);font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.72);line-height:1.85;max-width:520px;margin-bottom:2rem;}
+.hero-p strong{color:rgba(255,255,255,.95);font-style:normal}
+.btn-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-size:13.5px;font-weight:700;cursor:pointer;border:none;transition:transform .18s,box-shadow .18s,background .18s;line-height:1.35;font-family:var(--font-sans);}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-light)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);background:rgba(255,255,255,.05)}
+.btn-sub{display:block;font-size:10px;font-weight:400;opacity:.6;margin-top:4px;letter-spacing:.02em}
+.btn-green{background:var(--green-dark);color:#fff}
+.btn-green:hover{background:#003828}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:1.75rem;margin-top:1.75rem;border-top:1px solid rgba(255,255,255,.13);}
+.stat-n{font-family:var(--font-display);font-size:46px;color:var(--gold);line-height:1}
+.stat-l{font-size:11px;color:rgba(255,255,255,.5);margin-top:3px;letter-spacing:.04em}
+.hero-img-wrap{position:relative}
+.hero-img-wrap img{width:100%;border-radius:14px;box-shadow:0 28px 64px rgba(0,0,0,.5);object-fit:cover;aspect-ratio:4/3;}
+.hero-img-badge{position:absolute;bottom:-16px;left:-16px;background:var(--red);color:#fff;font-family:var(--font-display);font-size:13px;letter-spacing:.1em;padding:10px 18px;border-radius:6px;box-shadow:0 6px 20px rgba(200,16,46,.45);}
+
+#vision{background:var(--off-white);padding:5.5rem 2rem}
+.vision-layout{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.vision-text-body{font-size:15.5px;color:var(--text);line-height:1.9;}
+.vision-text-body p{margin-bottom:1.2rem}
+.vision-text-body p:first-child::first-letter{font-family:var(--font-display);font-size:4.5rem;color:var(--green);float:left;line-height:.8;margin-right:.12em;margin-top:.05em;}
+.vision-points{list-style:none;margin-top:1.5rem}
+.vision-points li{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border);}
+.vision-points li:last-child{border-bottom:none}
+.vp-icon{width:32px;height:32px;min-width:32px;background:var(--green);color:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px;}
+.vp-text h4{font-size:14.5px;font-weight:700;color:var(--green-dark);margin-bottom:.2rem}
+.vp-text p{font-size:13px;color:var(--muted);line-height:1.6}
+.vision-img img{width:100%;border-radius:14px;box-shadow:0 14px 44px rgba(0,0,0,.16);object-fit:cover;aspect-ratio:3/4;position:sticky;top:90px;}
+
+#manifesto{background:var(--green-dark);color:#fff;padding:5.5rem 2rem}
+#manifesto .section-title{color:var(--gold)}
+#manifesto .section-sub{color:rgba(255,255,255,.55)}
+.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden;}
+.m-item{display:flex;gap:1.25rem;padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08);border-right:1px solid rgba(255,255,255,.08);align-items:flex-start;transition:background .2s;}
+.m-item:hover{background:rgba(255,255,255,.04)}
+.m-item:nth-child(2n){border-right:none}
+.m-item:nth-last-child(-n+2){border-bottom:none}
+.m-num{font-family:var(--font-display);font-size:42px;color:var(--red-light);line-height:1;min-width:44px;opacity:.55;}
+.m-body h4{font-size:15px;font-weight:700;margin-bottom:.4rem;color:#fff}
+.m-body p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7}
+
+#eligibility{background:var(--cream);padding:5.5rem 2rem}
+.req-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;margin-bottom:2.5rem}
+.req-card{background:#fff;border-top:4px solid var(--green);border-radius:0 0 12px 12px;padding:1.6rem;box-shadow:0 2px 16px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s;}
+.req-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.12)}
+.req-card:nth-child(even){border-top-color:var(--red)}
+.req-tag{font-size:9.5px;font-weight:700;letter-spacing:.18em;color:var(--muted);margin-bottom:.6rem;text-transform:uppercase}
+.req-card h3{font-size:18px;font-weight:800;color:var(--green-dark);margin-bottom:.4rem;line-height:1.2}
+.req-card:nth-child(even) h3{color:var(--red-dark)}
+.req-card p{font-size:13px;color:var(--muted);line-height:1.65}
+.join-note{background:var(--green);border-radius:12px;padding:2rem 2.5rem;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,106,78,.3);}
+.join-note p{font-size:15px;color:rgba(255,255,255,.72);max-width:600px;line-height:1.7}
+.join-note strong{display:block;font-size:19px;color:#fff;margin-bottom:.4rem}
+
+/* ══════════════════════════════════
+   STRUCTURE — diagram-only focus
+══════════════════════════════════ */
+#structure{background:var(--off-white);padding:5.5rem 2rem}
+
+.org-diagram{
+  background:var(--green-dark);
+  border-radius:16px;
+  padding:2.5rem 2rem;
+  max-width:680px;
+  margin:0 auto;
+  overflow-x:auto;
+}
+.org-label-top{
+  text-align:center;
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-bottom:.75rem;
+}
+.org-row{
+  display:flex;
+  justify-content:center;
+  gap:.75rem;
+  flex-wrap:wrap;
+  margin:.25rem 0;
+}
+.org-line{
+  text-align:center;
+  color:rgba(255,255,255,.25);
+  font-size:18px;
+  line-height:1.4;
+  margin:.15rem 0;
+}
+.org-node{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;
+  padding:.55rem 1.1rem;
+  font-size:12.5px;
+  font-weight:600;
+  color:rgba(255,255,255,.85);
+  white-space:nowrap;
+  cursor:default;
+  transition:background .22s, border-color .22s, transform .18s, box-shadow .18s;
+}
+.org-node:hover{
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.4);
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+  color:#fff;
+}
+.org-node.gold{
+  background:rgba(232,184,75,.18);
+  border-color:var(--gold);
+  color:var(--gold);
+}
+.org-node.gold:hover{
+  background:rgba(232,184,75,.35);
+  box-shadow:0 8px 24px rgba(232,184,75,.3);
+}
+.org-node.red{
+  background:rgba(200,16,46,.25);
+  border-color:var(--red-light);
+  color:rgba(255,140,140,.9);
+}
+.org-node.red:hover{
+  background:rgba(200,16,46,.4);
+  box-shadow:0 8px 24px rgba(200,16,46,.35);
+}
+.org-node.green{
+  background:rgba(0,133,96,.4);
+  border-color:var(--green-mid);
+  color:rgba(160,255,210,.9);
+}
+.org-node.green:hover{
+  background:rgba(0,133,96,.6);
+  box-shadow:0 8px 24px rgba(0,133,96,.35);
+}
+.org-caption{
+  text-align:center;
+  font-size:11px;
+  color:rgba(255,255,255,.3);
+  margin-top:1.5rem;
+  letter-spacing:.04em;
+  font-style:italic;
+}
+
+.banner-section{position:relative;overflow:hidden;max-height:320px}
+.banner-section img{width:100%;height:320px;object-fit:cover;display:block}
+.banner-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,106,78,.8) 0%,rgba(200,16,46,.6) 100%);display:flex;align-items:center;justify-content:center;}
+.banner-tagline{font-family:var(--font-display);font-size:clamp(28px,6vw,64px);color:#fff;letter-spacing:.05em;text-align:center;text-shadow:0 4px 24px rgba(0,0,0,.5);}
+.banner-tagline span{color:var(--gold)}
+
+#contact{background:var(--cream);padding:5.5rem 2rem}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.contact-info .section-sub{margin-bottom:1.75rem}
+.c-item{display:flex;gap:16px;align-items:flex-start;padding:1.1rem 0;border-bottom:1px solid var(--border);}
+.c-item:last-child{border-bottom:none}
+.c-icon{width:40px;height:40px;min-width:40px;background:var(--green);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.c-item h4{font-size:14px;font-weight:700;color:var(--green-dark);margin-bottom:3px}
+.c-item p{font-size:13px;color:var(--muted);line-height:1.55}
+.c-item a{color:var(--red);font-weight:500}
+.c-item a:hover{text-decoration:underline}
+
+.form-box{background:#fff;border-radius:14px;padding:2rem;box-shadow:0 8px 40px rgba(0,0,0,.1);border:1px solid var(--border);}
+.form-box h3{font-family:var(--font-display);font-size:28px;color:var(--green-dark);letter-spacing:.04em;margin-bottom:.3rem;}
+.form-box p{font-size:13px;color:var(--muted);margin-bottom:1.5rem}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:.04em;margin-bottom:.4rem;text-transform:uppercase;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;font-size:14px;font-family:var(--font-sans);border:1.5px solid var(--border);border-radius:7px;background:#fafafa;color:var(--text);transition:border-color .2s,box-shadow .2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.1);background:#fff;}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{width:100%;padding:13px;background:var(--green);color:#fff;border:none;border-radius:7px;font-size:15px;font-weight:700;font-family:var(--font-sans);cursor:pointer;transition:background .2s,transform .18s;margin-top:.5rem;}
+.form-submit:hover{background:var(--green-dark);transform:translateY(-2px)}
+.form-success{display:none;background:#f0faf5;border:1.5px solid var(--green);border-radius:8px;padding:1.25rem;text-align:center;font-size:14px;color:var(--green-dark);margin-top:1rem;font-weight:600;}
+.form-success.show{display:block}
+.or-divider{display:flex;align-items:center;gap:.75rem;margin:1.5rem 0;font-size:12px;color:var(--muted);letter-spacing:.05em;}
+.or-divider::before,.or-divider::after{content:"";flex:1;height:1px;background:var(--border)}
+
+.flag-strip{height:7px;display:flex}
+.flag-strip .gs{flex:1;background:var(--green)}
+.flag-strip .rs{flex:1;background:var(--red)}
+footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padding:3rem 2rem;font-size:13px}
+.footer-logo{font-family:var(--font-display);font-size:26px;color:var(--gold);letter-spacing:.1em;margin-bottom:.5rem}
+.footer-sub{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.45);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:11px;opacity:.35;line-height:1.7}
+
+@media(max-width:820px){
+  .hero-inner,.vision-layout,.contact-layout{grid-template-columns:1fr}
+  .manifesto-grid{grid-template-columns:1fr}
+  .m-item{border-right:none}
+  .m-item:nth-last-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}
+  .m-item:last-child{border-bottom:none}
+  .hero-img-wrap{order:-1}
+  .hero-img-wrap img{aspect-ratio:16/9}
+  .vision-img img{position:static;aspect-ratio:16/9}
+  .form-row{grid-template-columns:1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--green-dark);padding:.75rem 0;box-shadow:0 8px 24px rgba(0,0,0,.3);}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 2rem;border-right:none}
+  .nav-cta{margin:8px 2rem!important;border-radius:6px!important}
+  .ham{display:flex}
+}
+@media(max-width:480px){
+  .hero{padding:4rem 1.25rem 3.5rem}
+  .btn-row{flex-direction:column}
+  .btn{width:100%;text-align:center}
+  .hero-stats{gap:1.5rem}
+  .join-note{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>🪳 Sponsored by no one</span>
+    <span>★ Funded by nothing</span>
+    <span>📡 HQ: Wherever WiFi works</span>
+    <span>💤 Built by exhausted people</span>
+    <span>📰 Volume 1 · Edition 1</span>
+    <span>🇧🇩 Voice of Bangladesh</span>
+    <span>🪳 Sponsored by no one</span>
+    <span>★ Funded by nothing</span>
+    <span>📡 HQ: Wherever WiFi works</span>
+    <span>💤 Built by exhausted people</span>
+    <span>📰 Volume 1 · Edition 1</span>
+    <span>🇧🇩 Voice of Bangladesh</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#home" class="nav-logo">
+    <img src="logopic.jpeg" alt="CJP Bangladesh Logo" onerror="this.style.display='none'"/>
+    <div class="nav-logo-text">
+      CJP Bangladesh
+      <small>Cockroach Jonota Party</small>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#eligibility">Eligibility</a></li>
+    <li><a href="#structure">Structure</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        Sponsored by no one &nbsp;·&nbsp; Funded by nothing &nbsp;·&nbsp; Vol. 1
+      </div>
+      <h1 class="hero-h1">
+        <span class="gold">Voice of the</span>
+        <span class="red-w">Lazy &amp; Unemployed.</span>
+      </h1>
+      <p class="hero-p">
+        A movement for the people the system forgot to count.<br/>
+        <strong>Not rich. Not powerful. Just tired — and honest.</strong><br/><br/>
+        We don't have corporate sponsors or political promises.<br/>
+        Nobody listened, so we showed up anyway.
+      </p>
+      <div class="btn-row">
+        <a href="#contact" class="btn btn-red">
+          Join the Movement
+          <span class="btn-sub">→ Because scrolling won't change anything</span>
+        </a>
+        <a href="#manifesto" class="btn btn-outline">
+          Read the Manifesto
+          <span class="btn-sub">→ One page. We promise.</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-n">8</div><div class="stat-l">Demands</div></div>
+        <div><div class="stat-n">0</div><div class="stat-l">Corporate donors</div></div>
+        <div><div class="stat-n">∞</div><div class="stat-l">Patience</div></div>
+        <div><div class="stat-n">1</div><div class="stat-l">Founder, no PA</div></div>
+      </div>
+    </div>
+    <div class="hero-img-wrap reveal">
+      <img src="flagpic.jpeg" alt="CJP Bangladesh Movement" onerror="this.style.background='rgba(255,255,255,.08)';this.style.minHeight='300px';this.style.borderRadius='14px'"/>
+      <div class="hero-img-badge">Est. 2026</div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
+
+<section id="vision">
+  <div class="container">
+    <span class="section-label reveal">Our Movement's Vision</span>
+    <h2 class="section-title reveal">Vision for a<br/>Better Bangladesh</h2>
+    <p class="section-sub reveal">
+      We are not here to repeat old politics or create new names for old corruption.
+      We are here to ask simple questions — loudly and clearly.
+    </p>
+    <div class="vision-layout">
+      <div class="reveal">
+        <div class="vision-text-body">
+          <p>
+            Something is fundamentally broken. The system that was supposed to serve the people now protects those already in power. We see it every day — in the hospitals that turn away the poor, in the schools that teach nothing useful, in the jobs that go to connections not qualifications.
+          </p>
+          <p>
+            Our vision is simple: a Bangladesh where every human being is treated with dignity, protected by law, and given a fair chance to build a life.
+          </p>
+        </div>
+        <ul class="vision-points">
+          <li>
+            <div class="vp-icon">🛡️</div>
+            <div class="vp-text"><h4>Safety for children, women &amp; the vulnerable</h4><p>Equal protection and respect for every person, regardless of background.</p></div>
+          </li>
+          <li>
+            <div class="vp-icon">⚖️</div>
+            <div class="vp-text"><h4>Proper healthcare in every area</h4><p>Close the gap between village and city. Medical care should not depend on wealth.</p></div>
+          </li>
+          <li>
+            <div class="vp-icon">📚</div>
+            <div class="vp-text"><h4>Quality education for all</h4><p>Skills, digital learning, and real careers — not rote memorisation for certificates.</p></div>
+          </li>
+          <li>
+            <div class="vp-icon">🔍</div>
+            <div class="vp-text"><h4>Transparent, corruption-free government</h4><p>Public money must go to the public. Full accountability at every level.</p></div>
+          </li>
+          <li>
+            <div class="vp-icon">🌐</div>
+            <div class="vp-text"><h4>A modern, progressive nation</h4><p>Technology, innovation, and young ideas — Bangladesh is ready for the world.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="vision-img reveal">
+        <img src="lecturepic.jpeg" alt="CJP Bangladesh Vision" onerror="this.style.background='var(--off-white)';this.style.minHeight='400px';this.style.borderRadius='14px'"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
+
+<section id="manifesto">
+  <div class="container">
+    <span class="section-label reveal" style="color:rgba(255,120,120,.85)">Our Manifesto</span>
+    <h2 class="section-title reveal">The Eight<br/>Demands.</h2>
+    <p class="section-sub reveal">
+      No corporate sponsors. No political promises. Just eight things that should not need to be demanded — but here we are.
+    </p>
+    <div class="manifesto-grid">
+      <div class="m-item reveal"><div class="m-num">01</div><div class="m-body"><h4>Safe &amp; Human-Centered Society</h4><p>Ensure safety for every person. Protect the vulnerable. Equal respect and dignity. Stop violence and discrimination in all forms.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">02</div><div class="m-body"><h4>Basic Human Rights for All</h4><p>Freedom of speech, justice, religion, and movement — and full protection of every citizen's privacy and personal information.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">03</div><div class="m-body"><h4>Better Education System</h4><p>Affordable, quality education everywhere. Focus on real skills, digital learning, AI, programming, and meaningful careers.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">04</div><div class="m-body"><h4>Healthcare for Everyone</h4><p>Proper medical treatment for all citizens. Close the village-city gap. Affordable services, digital health, fast emergency care.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">05</div><div class="m-body"><h4>Jobs Based on Skill &amp; Merit</h4><p>Equal opportunity based on qualification — not connections. Fair recruitment. Support for youth, freelancers, and startups.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">06</div><div class="m-body"><h4>Technology-Based Government</h4><p>Fully digital public services. Smart, transparent governance. Eliminate corruption through technology and accountability systems.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">07</div><div class="m-body"><h4>Corruption-Free Administration</h4><p>Stop the misuse of power. Full transparency in government. Proper use of public taxes — at every single level, no exceptions.</p></div></div>
+      <div class="m-item reveal"><div class="m-num">08</div><div class="m-body"><h4>Modern &amp; Progressive Bangladesh</h4><p>Innovation, research, and technology. Young ideas driving real change. A strong digital economy. A skilled, humane, forward-thinking nation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
+
+<section id="eligibility">
+  <div class="container">
+    <span class="section-label reveal">Membership</span>
+    <h2 class="section-title reveal">Are You<br/>Eligible?</h2>
+    <p class="section-sub reveal">
+      We don't care about religion, caste, gender, or where you come from.
+      We have only four requirements.
+    </p>
+    <div class="req-grid">
+      <div class="req-card reveal"><div class="req-tag">Req / 01</div><h3>Unemployed</h3><p>By force, by choice, or by principle. We don't ask questions and we don't judge.</p></div>
+      <div class="req-card reveal"><div class="req-tag">Req / 02</div><h3>Lazy (physically only)</h3><p>The body rests. The mind overthinks everything at 3 AM. We understand completely.</p></div>
+      <div class="req-card reveal"><div class="req-tag">Req / 03</div><h3>Chronically Online</h3><p>Minimum 11 hours daily. Yes, even during meals. Even in awkward silence.</p></div>
+      <div class="req-card reveal"><div class="req-tag">Req / 04</div><h3>Professional Ranter</h3><p>Must complain with clarity, humour, and dangerously accurate observations about the system.</p></div>
+    </div>
+    <div class="join-note reveal">
+      <div>
+        <strong>Membership is free, lifelong, and cancellable only by you.</strong>
+        <p>No fees. No forms asking for your life history. No selfies with politicians. No "missed call to join" nonsense. Just show up.</p>
+      </div>
+      <a href="#contact" class="btn btn-red" style="white-space:nowrap;flex-shrink:0">
+        Join Us Now
+        <span class="btn-sub">Because doing nothing alone is boring.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
+
+<!-- STRUCTURE — diagram only, no side text -->
+<section id="structure">
+  <div class="container">
+    <span class="section-label reveal">Organisation</span>
+    <h2 class="section-title reveal" style="text-align:center">How We're<br/>Structured</h2>
+    <p class="section-sub reveal" style="margin:0 auto 2.5rem;text-align:center">
+      Decentralised. Anonymous. Unstoppable.
+    </p>
+
+    <div class="reveal">
+      <div class="org-diagram">
+        <div class="org-label-top">Central Command</div>
+        <div class="org-row">
+          <div class="org-node gold">🪳 National Anonymous Core Team</div>
+        </div>
+        <div class="org-line">↓</div>
+        <div class="org-row">
+          <div class="org-node green">Division Coordinator</div>
+          <div class="org-node green">Division Coordinator</div>
+          <div class="org-node green">Division Coordinator</div>
+        </div>
+        <div class="org-line">↓</div>
+        <div class="org-row">
+          <div class="org-node">District Coordinator</div>
+          <div class="org-node">District Coordinator</div>
+          <div class="org-node">District Coordinator</div>
+        </div>
+        <div class="org-line">↓</div>
+        <div class="org-row">
+          <div class="org-node">Thana / Upazila</div>
+          <div class="org-node">Thana / Upazila</div>
+          <div class="org-node">Thana / Upazila</div>
+        </div>
+        <div class="org-line">↓</div>
+        <div class="org-row">
+          <div class="org-node red">University / College</div>
+          <div class="org-node red">School Chapter</div>
+          <div class="org-node red">Village Team</div>
+        </div>
+        <p class="org-caption">Each chapter: 5 members · Scout · Amplifier · Connector · Guardian · Voice</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
+
+<div class="banner-section">
+  <img src="bannerpic.jpeg" alt="CJP Bangladesh" onerror="this.style.display='none'"/>
+  <div class="banner-overlay">
+    <div class="banner-tagline">
+      We Showed Up<br/><span>Anyway.</span>
+    </div>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="container">
+    <span class="section-label reveal">Get in Touch</span>
+    <h2 class="section-title reveal">Join &amp; Connect<br/>With Us.</h2>
+    <div class="contact-layout">
+
+      <div class="reveal">
+        <p class="section-sub" style="margin-bottom:1.75rem">
+          Want to join, volunteer, complain, suggest chaos, or just send a meme?
+          We read everything. We reply when we can.
+        </p>
+        <div class="c-item">
+          <div class="c-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:cjpbd@proton.me">cjpbd@proton.me</a></p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">📰</div>
+          <div>
+            <h4>Press Inquiries</h4>
+            <p><a href="mailto:press@cjpbangladesh.org">press@cjpbangladesh.org</a></p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">📍</div>
+          <div>
+            <h4>Headquarters</h4>
+            <p>Wherever the WiFi actually works. Bangladesh.</p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">👤</div>
+          <div>
+            <h4>Founder</h4>
+            <p>Ismail Shikder</p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">📘</div>
+          <div>
+            <h4>Facebook</h4>
+            <p><a href="https://www.facebook.com/profile.php?id=61590039015096" target="_blank" rel="noopener">@cjpbangladesh</a></p>
+          </div>
+          <div>
+            <h4>Instagram</h4>
+            <p><a href="https://www.instagram.com/cjp_b.angladesh/" target="_blank" rel="noopener">@cjpbangladesh</a></p>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem;font-size:13px;color:var(--muted);line-height:1.7">
+          No forms that ask for your life history.<br/>
+          No unnecessary approvals.<br/>
+          Just reach out — we're listening.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div class="form-box">
+          <h3>Join the Swarm</h3>
+          <p>Free membership · 60 seconds · no ID required</p>
+
+          <form id="join-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Your Name</label>
+                <input type="text" id="f-name" name="name" placeholder="Real name or alias" required/>
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email Address</label>
+                <input type="email" id="f-email" name="email" placeholder="your@email.com" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-district">District</label>
+                <select id="f-district" name="district" required>
+                  <option value="">— Select district —</option>
+                  <option>Dhaka</option><option>Chittagong</option><option>Sylhet</option>
+                  <option>Rajshahi</option><option>Khulna</option><option>Barisal</option>
+                  <option>Mymensingh</option><option>Rangpur</option><option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-role">How will you help?</label>
+                <select id="f-role" name="role">
+                  <option value="">— Select role —</option>
+                  <option>Student activist</option>
+                  <option>Social media amplifier</option>
+                  <option>Local chapter starter</option>
+                  <option>Content creator</option>
+                  <option>Just here to rant</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-rant">Your One Complaint (mandatory)</label>
+              <textarea id="f-rant" name="complaint" placeholder="Tell us what's broken. Be specific. Be honest. Be angry if you need to." required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="form-btn">
+              Enroll in the Movement →
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success">
+            ✓ Welcome to the swarm! Your complaint is officially on record.<br/>
+            <small style="opacity:.75;font-weight:400">Revolution incoming — probably. Check your email for confirmation.</small>
+          </div>
+
+          <div id="form-error" style="display:none;background:#fff0f0;border:1.5px solid var(--red);border-radius:8px;padding:1rem;text-align:center;font-size:13px;color:var(--red-dark);margin-top:1rem;font-weight:600">
+            ⚠ Something went wrong. Please email us directly instead.
+          </div>
+
+          <div class="or-divider">or email us directly</div>
+          <p style="text-align:center;font-size:13px;color:var(--muted)">
+            <a href="mailto:cjpbd@proton.me" style="color:var(--green);font-weight:600">cjpbd@proton.me</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"><div class="gs"></div><div class="rs"></div></div>
+
+<footer>
+  <div class="footer-logo">CJP BANGLADESH</div>
+  <div class="footer-sub">Cockroach Jonota Party Bangladesh — কক্রোচ জনতা পার্টি — Est. 2026</div>
+  <div class="footer-links">
+    <a href="#vision">Vision</a>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#structure">Structure</a>
+    <a href="#contact">Contact</a>
+    <a href="https://facebook.com/cjpbangladesh" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <div class="footer-copy">
+    Sponsored by no one &nbsp;·&nbsp; Funded by nothing &nbsp;·&nbsp; Accountable to everyone<br/>
+    Voice. Unity. Survival. Progress. We showed up anyway.<br/>
+    © 2026 Cockroach Jonota Party Bangladesh. All complaints reserved.
+  </div>
+</footer>
+
+<script>
+const ham = document.getElementById("ham");
+const nl  = document.getElementById("nav-links");
+ham.addEventListener("click", () => nl.classList.toggle("open"));
+nl.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nl.classList.remove("open")));
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add("on"), i * 60);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyWx0YIBi-Sgv3Q9lAgQRQKSlHznn_GcHQbtj2ABs02PLOuV8mz-1gQ84Y6lQHiPork/exec";
+
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  const btn      = document.getElementById("form-btn");
+  const success  = document.getElementById("form-success");
+  const error    = document.getElementById("form-error");
+  const form     = document.getElementById("join-form");
+  const name     = document.getElementById("f-name").value.trim();
+  const email    = document.getElementById("f-email").value.trim();
+  const district = document.getElementById("f-district").value;
+  const role     = document.getElementById("f-role").value;
+  const complaint= document.getElementById("f-rant").value.trim();
+  if (!name || !email || !district || !complaint) {
+    alert("Please fill in your name, email, district and complaint!");
+    return;
+  }
+  btn.textContent   = "Sending…";
+  btn.disabled      = true;
+  btn.style.opacity = "0.7";
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode:   "no-cors",
+      headers:{ "Content-Type": "application/json" },
+      body:   JSON.stringify({ name, email, district, role, complaint })
+    });
+    form.style.display = "none";
+    success.classList.add("show");
+    success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } catch (err) {
+    error.style.display  = "block";
+    btn.textContent      = "Enroll in the Movement →";
+    btn.disabled         = false;
+    btn.style.opacity    = "1";
+    error.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+}
+</script>
+</body>
+</html>
