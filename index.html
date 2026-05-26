@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="9xrpDXMXHN7O68gd-0RgKhN7k45IAEjSsRhAMG8TVvs" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta name="theme-color" content="#006A4E"/>
@@ -863,6 +862,8 @@ async function drawCard(name, district, role, memberId) {
   chips.forEach((chip, i) => {
     const cx = 52 + i * (chipW + chipGap);
     const cy = chipY;
+    const maxTextW = chipW - 36;
+
     // Chip background
     ctx.fillStyle = "#f3f3f3";
     rr(ctx, cx, cy, chipW, chipH, 12); ctx.fill();
@@ -878,12 +879,30 @@ async function drawCard(name, district, role, memberId) {
     ctx.font = "600 15px 'DM Sans', Arial, sans-serif";
     ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
     ctx.fillText(chip.label, cx + 18, cy + 32);
-    // Value
+
+    // Value — auto shrink then word-wrap
     ctx.fillStyle = chip.green ? "#006A4E" : "#111111";
-    ctx.font = chip.green
-      ? "800 24px 'DM Sans', Arial, sans-serif"
-      : "700 24px 'DM Sans', Arial, sans-serif";
-    ctx.fillText(chip.val, cx + 18, cy + 72);
+    let fontSize = 24;
+    ctx.font = (chip.green ? "800 " : "700 ") + fontSize + "px 'DM Sans', Arial, sans-serif";
+    while (ctx.measureText(chip.val).width > maxTextW && fontSize > 13) {
+      fontSize -= 1;
+      ctx.font = (chip.green ? "800 " : "700 ") + fontSize + "px 'DM Sans', Arial, sans-serif";
+    }
+    // Word wrap into lines
+    const words = chip.val.split(" ");
+    const lines = [];
+    let cur = "";
+    words.forEach(word => {
+      const test = cur ? cur + " " + word : word;
+      if (ctx.measureText(test).width > maxTextW && cur) { lines.push(cur); cur = word; }
+      else cur = test;
+    });
+    if (cur) lines.push(cur);
+    // Draw lines bottom-aligned in chip
+    const lineH = fontSize + 5;
+    const totalH = lines.length * lineH;
+    const startY = cy + chipH - 12 - totalH + lineH;
+    lines.forEach((line, li) => ctx.fillText(line, cx + 18, startY + li * lineH));
   });
 
   // ── FOOTER ──
