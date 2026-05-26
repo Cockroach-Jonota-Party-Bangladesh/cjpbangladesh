@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Bengali:wght@400;600;800&display=swap" rel="stylesheet"/>
+
 <style>
 :root{
   --green:#006A4E;
@@ -51,14 +52,7 @@ a{text-decoration:none;color:inherit}
 .ticker-inner span{margin:0 2rem;display:flex;align-items:center;gap:.5rem}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-nav{
-  position:sticky;top:0;z-index:200;
-  background:var(--green);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;
-  box-shadow:0 3px 20px rgba(0,0,0,.32);
-  border-bottom:3px solid var(--gold);
-}
+nav{position:sticky;top:0;z-index:200;background:var(--green);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;box-shadow:0 3px 20px rgba(0,0,0,.32);border-bottom:3px solid var(--gold);}
 .nav-logo{display:flex;align-items:center;gap:12px;padding:10px 0;transition:opacity .2s}
 .nav-logo:hover{opacity:.85}
 .nav-logo img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
@@ -138,95 +132,20 @@ nav{
 .join-note p{font-size:15px;color:rgba(255,255,255,.72);max-width:600px;line-height:1.7}
 .join-note strong{display:block;font-size:19px;color:#fff;margin-bottom:.4rem}
 
-/* ══════════════════════════════════
-   STRUCTURE — diagram-only focus
-══════════════════════════════════ */
 #structure{background:var(--off-white);padding:5.5rem 2rem}
-
-.org-diagram{
-  background:var(--green-dark);
-  border-radius:16px;
-  padding:2.5rem 2rem;
-  max-width:680px;
-  margin:0 auto;
-  overflow-x:auto;
-}
-.org-label-top{
-  text-align:center;
-  font-size:9px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,.3);
-  margin-bottom:.75rem;
-}
-.org-row{
-  display:flex;
-  justify-content:center;
-  gap:.75rem;
-  flex-wrap:wrap;
-  margin:.25rem 0;
-}
-.org-line{
-  text-align:center;
-  color:rgba(255,255,255,.25);
-  font-size:18px;
-  line-height:1.4;
-  margin:.15rem 0;
-}
-.org-node{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:8px;
-  padding:.55rem 1.1rem;
-  font-size:12.5px;
-  font-weight:600;
-  color:rgba(255,255,255,.85);
-  white-space:nowrap;
-  cursor:default;
-  transition:background .22s, border-color .22s, transform .18s, box-shadow .18s;
-}
-.org-node:hover{
-  background:rgba(255,255,255,.18);
-  border-color:rgba(255,255,255,.4);
-  transform:translateY(-3px) scale(1.04);
-  box-shadow:0 8px 24px rgba(0,0,0,.35);
-  color:#fff;
-}
-.org-node.gold{
-  background:rgba(232,184,75,.18);
-  border-color:var(--gold);
-  color:var(--gold);
-}
-.org-node.gold:hover{
-  background:rgba(232,184,75,.35);
-  box-shadow:0 8px 24px rgba(232,184,75,.3);
-}
-.org-node.red{
-  background:rgba(200,16,46,.25);
-  border-color:var(--red-light);
-  color:rgba(255,140,140,.9);
-}
-.org-node.red:hover{
-  background:rgba(200,16,46,.4);
-  box-shadow:0 8px 24px rgba(200,16,46,.35);
-}
-.org-node.green{
-  background:rgba(0,133,96,.4);
-  border-color:var(--green-mid);
-  color:rgba(160,255,210,.9);
-}
-.org-node.green:hover{
-  background:rgba(0,133,96,.6);
-  box-shadow:0 8px 24px rgba(0,133,96,.35);
-}
-.org-caption{
-  text-align:center;
-  font-size:11px;
-  color:rgba(255,255,255,.3);
-  margin-top:1.5rem;
-  letter-spacing:.04em;
-  font-style:italic;
-}
+.org-diagram{background:var(--green-dark);border-radius:16px;padding:2.5rem 2rem;max-width:680px;margin:0 auto;overflow-x:auto;}
+.org-label-top{text-align:center;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.75rem;}
+.org-row{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;margin:.25rem 0;}
+.org-line{text-align:center;color:rgba(255,255,255,.25);font-size:18px;line-height:1.4;margin:.15rem 0;}
+.org-node{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:.55rem 1.1rem;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.85);white-space:nowrap;cursor:default;transition:background .22s,border-color .22s,transform .18s,box-shadow .18s;}
+.org-node:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4);transform:translateY(-3px) scale(1.04);box-shadow:0 8px 24px rgba(0,0,0,.35);color:#fff;}
+.org-node.gold{background:rgba(232,184,75,.18);border-color:var(--gold);color:var(--gold);}
+.org-node.gold:hover{background:rgba(232,184,75,.35);box-shadow:0 8px 24px rgba(232,184,75,.3);}
+.org-node.red{background:rgba(200,16,46,.25);border-color:var(--red-light);color:rgba(255,140,140,.9);}
+.org-node.red:hover{background:rgba(200,16,46,.4);box-shadow:0 8px 24px rgba(200,16,46,.35);}
+.org-node.green{background:rgba(0,133,96,.4);border-color:var(--green-mid);color:rgba(160,255,210,.9);}
+.org-node.green:hover{background:rgba(0,133,96,.6);box-shadow:0 8px 24px rgba(0,133,96,.35);}
+.org-caption{text-align:center;font-size:11px;color:rgba(255,255,255,.3);margin-top:1.5rem;letter-spacing:.04em;font-style:italic;}
 
 .banner-section{position:relative;overflow:hidden;max-height:320px}
 .banner-section img{width:100%;height:320px;object-fit:cover;display:block}
@@ -256,10 +175,44 @@ nav{
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-submit{width:100%;padding:13px;background:var(--green);color:#fff;border:none;border-radius:7px;font-size:15px;font-weight:700;font-family:var(--font-sans);cursor:pointer;transition:background .2s,transform .18s;margin-top:.5rem;}
 .form-submit:hover{background:var(--green-dark);transform:translateY(-2px)}
-.form-success{display:none;background:#f0faf5;border:1.5px solid var(--green);border-radius:8px;padding:1.25rem;text-align:center;font-size:14px;color:var(--green-dark);margin-top:1rem;font-weight:600;}
+.form-submit:disabled{opacity:.65;cursor:not-allowed;transform:none}
+.form-success{display:none;background:#f0faf5;border:1.5px solid var(--green);border-radius:8px;padding:1rem;text-align:center;font-size:13px;color:var(--green-dark);margin-top:1rem;font-weight:600;}
 .form-success.show{display:block}
 .or-divider{display:flex;align-items:center;gap:.75rem;margin:1.5rem 0;font-size:12px;color:var(--muted);letter-spacing:.05em;}
 .or-divider::before,.or-divider::after{content:"";flex:1;height:1px;background:var(--border)}
+
+/* ══════════════════════════════════
+   ID CARD MODAL — CANVAS DESIGN
+══════════════════════════════════ */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(0,0,0,.78);backdrop-filter:blur(8px);
+  align-items:center;justify-content:center;padding:1.25rem;
+}
+.modal-overlay.show{display:flex}
+.modal-box{
+  background:var(--cream);border-radius:20px;
+  max-width:480px;width:100%;
+  box-shadow:0 40px 100px rgba(0,0,0,.5);
+  overflow:hidden;
+  animation:popIn .38s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes popIn{from{opacity:0;transform:scale(.82) translateY(20px)}to{opacity:1;transform:none}}
+#id-card-canvas{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:0;
+}
+.modal-bottom{padding:1.4rem 1.75rem}
+.modal-thanks{font-family:var(--font-display);font-size:24px;color:var(--green-dark);letter-spacing:.04em;margin-bottom:.3rem}
+.modal-msg{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:1.4rem}
+.modal-btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.modal-btns .btn{flex:1;min-width:110px;text-align:center;font-size:13px;padding:10px 16px}
+.btn-dl{background:var(--green);color:#fff}
+.btn-dl:hover{background:var(--green-dark)}
+.btn-cls{background:transparent;color:var(--green-dark);border:1.5px solid var(--border)}
+.btn-cls:hover{border-color:var(--green);background:rgba(0,106,78,.05)}
 
 .flag-strip{height:7px;display:flex}
 .flag-strip .gs{flex:1;background:var(--green)}
@@ -294,11 +247,13 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
   .btn{width:100%;text-align:center}
   .hero-stats{gap:1.5rem}
   .join-note{flex-direction:column;text-align:center}
+  .modal-btns{flex-direction:column}
 }
 </style>
 </head>
 <body>
 
+<!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-inner">
     <span>🪳 Sponsored by no one</span>
@@ -316,6 +271,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
   </div>
 </div>
 
+<!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">
     <img src="logopic.jpeg" alt="CJP Bangladesh Logo" onerror="this.style.display='none'"/>
@@ -337,12 +293,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
   </button>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">
-        Sponsored by no one &nbsp;·&nbsp; Funded by nothing &nbsp;·&nbsp; Vol. 1
-      </div>
+      <div class="hero-badge">Sponsored by no one &nbsp;·&nbsp; Funded by nothing &nbsp;·&nbsp; Vol. 1</div>
       <h1 class="hero-h1">
         <span class="gold">Voice of the</span>
         <span class="red-w">Lazy &amp; Unemployed.</span>
@@ -379,45 +334,24 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
 
 <div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
 
+<!-- VISION -->
 <section id="vision">
   <div class="container">
     <span class="section-label reveal">Our Movement's Vision</span>
     <h2 class="section-title reveal">Vision for a<br/>Better Bangladesh</h2>
-    <p class="section-sub reveal">
-      We are not here to repeat old politics or create new names for old corruption.
-      We are here to ask simple questions — loudly and clearly.
-    </p>
+    <p class="section-sub reveal">We are not here to repeat old politics or create new names for old corruption. We are here to ask simple questions — loudly and clearly.</p>
     <div class="vision-layout">
       <div class="reveal">
         <div class="vision-text-body">
-          <p>
-            Something is fundamentally broken. The system that was supposed to serve the people now protects those already in power. We see it every day — in the hospitals that turn away the poor, in the schools that teach nothing useful, in the jobs that go to connections not qualifications.
-          </p>
-          <p>
-            Our vision is simple: a Bangladesh where every human being is treated with dignity, protected by law, and given a fair chance to build a life.
-          </p>
+          <p>Something is fundamentally broken. The system that was supposed to serve the people now protects those already in power. We see it every day — in the hospitals that turn away the poor, in the schools that teach nothing useful, in the jobs that go to connections not qualifications.</p>
+          <p>Our vision is simple: a Bangladesh where every human being is treated with dignity, protected by law, and given a fair chance to build a life.</p>
         </div>
         <ul class="vision-points">
-          <li>
-            <div class="vp-icon">🛡️</div>
-            <div class="vp-text"><h4>Safety for children, women &amp; the vulnerable</h4><p>Equal protection and respect for every person, regardless of background.</p></div>
-          </li>
-          <li>
-            <div class="vp-icon">⚖️</div>
-            <div class="vp-text"><h4>Proper healthcare in every area</h4><p>Close the gap between village and city. Medical care should not depend on wealth.</p></div>
-          </li>
-          <li>
-            <div class="vp-icon">📚</div>
-            <div class="vp-text"><h4>Quality education for all</h4><p>Skills, digital learning, and real careers — not rote memorisation for certificates.</p></div>
-          </li>
-          <li>
-            <div class="vp-icon">🔍</div>
-            <div class="vp-text"><h4>Transparent, corruption-free government</h4><p>Public money must go to the public. Full accountability at every level.</p></div>
-          </li>
-          <li>
-            <div class="vp-icon">🌐</div>
-            <div class="vp-text"><h4>A modern, progressive nation</h4><p>Technology, innovation, and young ideas — Bangladesh is ready for the world.</p></div>
-          </li>
+          <li><div class="vp-icon">🛡️</div><div class="vp-text"><h4>Safety for children, women &amp; the vulnerable</h4><p>Equal protection and respect for every person, regardless of background.</p></div></li>
+          <li><div class="vp-icon">⚖️</div><div class="vp-text"><h4>Proper healthcare in every area</h4><p>Close the gap between village and city. Medical care should not depend on wealth.</p></div></li>
+          <li><div class="vp-icon">📚</div><div class="vp-text"><h4>Quality education for all</h4><p>Skills, digital learning, and real careers — not rote memorisation for certificates.</p></div></li>
+          <li><div class="vp-icon">🔍</div><div class="vp-text"><h4>Transparent, corruption-free government</h4><p>Public money must go to the public. Full accountability at every level.</p></div></li>
+          <li><div class="vp-icon">🌐</div><div class="vp-text"><h4>A modern, progressive nation</h4><p>Technology, innovation, and young ideas — Bangladesh is ready for the world.</p></div></li>
         </ul>
       </div>
       <div class="vision-img reveal">
@@ -429,13 +363,12 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
 
 <div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
 
+<!-- MANIFESTO -->
 <section id="manifesto">
   <div class="container">
     <span class="section-label reveal" style="color:rgba(255,120,120,.85)">Our Manifesto</span>
     <h2 class="section-title reveal">The Eight<br/>Demands.</h2>
-    <p class="section-sub reveal">
-      No corporate sponsors. No political promises. Just eight things that should not need to be demanded — but here we are.
-    </p>
+    <p class="section-sub reveal">No corporate sponsors. No political promises. Just eight things that should not need to be demanded — but here we are.</p>
     <div class="manifesto-grid">
       <div class="m-item reveal"><div class="m-num">01</div><div class="m-body"><h4>Safe &amp; Human-Centered Society</h4><p>Ensure safety for every person. Protect the vulnerable. Equal respect and dignity. Stop violence and discrimination in all forms.</p></div></div>
       <div class="m-item reveal"><div class="m-num">02</div><div class="m-body"><h4>Basic Human Rights for All</h4><p>Freedom of speech, justice, religion, and movement — and full protection of every citizen's privacy and personal information.</p></div></div>
@@ -451,14 +384,12 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
 
 <div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
 
+<!-- ELIGIBILITY -->
 <section id="eligibility">
   <div class="container">
     <span class="section-label reveal">Membership</span>
     <h2 class="section-title reveal">Are You<br/>Eligible?</h2>
-    <p class="section-sub reveal">
-      We don't care about religion, caste, gender, or where you come from.
-      We have only four requirements.
-    </p>
+    <p class="section-sub reveal">We don't care about religion, caste, gender, or where you come from. We have only four requirements.</p>
     <div class="req-grid">
       <div class="req-card reveal"><div class="req-tag">Req / 01</div><h3>Unemployed</h3><p>By force, by choice, or by principle. We don't ask questions and we don't judge.</p></div>
       <div class="req-card reveal"><div class="req-tag">Req / 02</div><h3>Lazy (physically only)</h3><p>The body rests. The mind overthinks everything at 3 AM. We understand completely.</p></div>
@@ -480,21 +411,16 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
 
 <div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
 
-<!-- STRUCTURE — diagram only, no side text -->
+<!-- STRUCTURE -->
 <section id="structure">
   <div class="container">
     <span class="section-label reveal">Organisation</span>
     <h2 class="section-title reveal" style="text-align:center">How We're<br/>Structured</h2>
-    <p class="section-sub reveal" style="margin:0 auto 2.5rem;text-align:center">
-      Decentralised. Anonymous. Unstoppable.
-    </p>
-
+    <p class="section-sub reveal" style="margin:0 auto 2.5rem;text-align:center">Decentralised. Anonymous. Unstoppable.</p>
     <div class="reveal">
       <div class="org-diagram">
         <div class="org-label-top">Central Command</div>
-        <div class="org-row">
-          <div class="org-node gold">🪳 National Anonymous Core Team</div>
-        </div>
+        <div class="org-row"><div class="org-node gold">🪳 National Anonymous Core Team</div></div>
         <div class="org-line">↓</div>
         <div class="org-row">
           <div class="org-node green">Division Coordinator</div>
@@ -527,15 +453,15 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
 
 <div class="flag-divider"><div class="gd"></div><div class="rd"></div></div>
 
+<!-- BANNER -->
 <div class="banner-section">
   <img src="bannerpic.jpeg" alt="CJP Bangladesh" onerror="this.style.display='none'"/>
   <div class="banner-overlay">
-    <div class="banner-tagline">
-      We Showed Up<br/><span>Anyway.</span>
-    </div>
+    <div class="banner-tagline">We Showed Up<br/><span>Anyway.</span></div>
   </div>
 </div>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <span class="section-label reveal">Get in Touch</span>
@@ -543,60 +469,42 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
     <div class="contact-layout">
 
       <div class="reveal">
-        <p class="section-sub" style="margin-bottom:1.75rem">
-          Want to join, volunteer, complain, suggest chaos, or just send a meme?
-          We read everything. We reply when we can.
-        </p>
+        <p class="section-sub" style="margin-bottom:1.75rem">Want to join, volunteer, complain, suggest chaos, or just send a meme? We read everything. We reply when we can.</p>
         <div class="c-item">
           <div class="c-icon">📧</div>
-          <div>
-            <h4>Email</h4>
-            <p><a href="mailto:cjpbd@proton.me">cjpbd@proton.me</a></p>
-          </div>
+          <div><h4>Email</h4><p><a href="mailto:cjpbd@proton.me">cjpbd@proton.me</a></p></div>
         </div>
         <div class="c-item">
           <div class="c-icon">📰</div>
-          <div>
-            <h4>Press Inquiries</h4>
-            <p><a href="mailto:press@cjpbangladesh.org">press@cjpbangladesh.org</a></p>
-          </div>
+          <div><h4>Press Inquiries</h4><p><a href="mailto:press@cjpbangladesh.org">press@cjpbangladesh.org</a></p></div>
         </div>
         <div class="c-item">
           <div class="c-icon">📍</div>
-          <div>
-            <h4>Headquarters</h4>
-            <p>Wherever the WiFi actually works. Bangladesh.</p>
-          </div>
+          <div><h4>Headquarters</h4><p>Wherever the WiFi actually works. Bangladesh.</p></div>
         </div>
         <div class="c-item">
           <div class="c-icon">👤</div>
-          <div>
-            <h4>Founder</h4>
-            <p>Ismail Shikder</p>
-          </div>
+          <div><h4>Founder</h4><p>Ismail Shikder</p></div>
         </div>
         <div class="c-item">
           <div class="c-icon">📘</div>
           <div>
             <h4>Facebook</h4>
             <p><a href="https://www.facebook.com/profile.php?id=61590039015096" target="_blank" rel="noopener">@cjpbangladesh</a></p>
-          </div>
-          <div>
-            <h4>Instagram</h4>
-            <p><a href="https://www.instagram.com/cjp_b.angladesh/" target="_blank" rel="noopener">@cjpbangladesh</a></p>
+            <h4 style="margin-top:.5rem">Instagram</h4>
+            <p><a href="https://www.instagram.com/cjp_b.angladesh/" target="_blank" rel="noopener">@cjp_b.angladesh</a></p>
           </div>
         </div>
         <p style="margin-top:1.5rem;font-size:13px;color:var(--muted);line-height:1.7">
-          No forms that ask for your life history.<br/>
-          No unnecessary approvals.<br/>
-          Just reach out — we're listening.
+          No forms that ask for your life history.<br/>No unnecessary approvals.<br/>Just reach out — we're listening.
         </p>
       </div>
 
+      <!-- FORM -->
       <div class="reveal">
         <div class="form-box">
           <h3>Join the Swarm</h3>
-          <p>Free membership · 60 seconds · no ID required</p>
+          <p>Free membership · 60 seconds · get your member ID card instantly</p>
 
           <form id="join-form" onsubmit="handleFormSubmit(event)">
             <div class="form-row">
@@ -641,10 +549,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
           </form>
 
           <div class="form-success" id="form-success">
-            ✓ Welcome to the swarm! Your complaint is officially on record.<br/>
-            <small style="opacity:.75;font-weight:400">Revolution incoming — probably. Check your email for confirmation.</small>
+            ✓ Submitted! Your ID card is ready below.
           </div>
-
           <div id="form-error" style="display:none;background:#fff0f0;border:1.5px solid var(--red);border-radius:8px;padding:1rem;text-align:center;font-size:13px;color:var(--red-dark);margin-top:1rem;font-weight:600">
             ⚠ Something went wrong. Please email us directly instead.
           </div>
@@ -653,13 +559,32 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
           <p style="text-align:center;font-size:13px;color:var(--muted)">
             <a href="mailto:cjpbd@proton.me" style="color:var(--green);font-weight:600">cjpbd@proton.me</a>
           </p>
-
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- ══════════════════════════════════
+     ID CARD MODAL — CANVAS BASED
+══════════════════════════════════ -->
+<div class="modal-overlay" id="id-modal" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <canvas id="id-card-canvas" width="1050" height="600"></canvas>
+    <div class="modal-bottom">
+      <div class="modal-thanks">Thanks for joining us!</div>
+      <div class="modal-msg">
+        You are officially part of the swarm. Your Cockroach ID is your badge of honour.
+        Download your card to keep it.
+      </div>
+      <div class="modal-btns">
+        <button class="btn btn-dl" onclick="downloadCard()">Download Card</button>
+        <button class="btn btn-cls" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="flag-strip"><div class="gs"></div><div class="rs"></div></div>
 
@@ -672,7 +597,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
     <a href="#eligibility">Eligibility</a>
     <a href="#structure">Structure</a>
     <a href="#contact">Contact</a>
-    <a href="https://facebook.com/cjpbangladesh" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.facebook.com/profile.php?id=61590039015096" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.instagram.com/cjp_b.angladesh/" target="_blank" rel="noopener">Instagram</a>
   </div>
   <div class="footer-copy">
     Sponsored by no one &nbsp;·&nbsp; Funded by nothing &nbsp;·&nbsp; Accountable to everyone<br/>
@@ -681,12 +607,15 @@ footer{background:var(--dark);color:rgba(255,255,255,.45);text-align:center;padd
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
+/* ── Nav hamburger ── */
 const ham = document.getElementById("ham");
 const nl  = document.getElementById("nav-links");
 ham.addEventListener("click", () => nl.classList.toggle("open"));
 nl.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nl.classList.remove("open")));
 
+/* ── Scroll reveal ── */
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
@@ -697,42 +626,360 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.07 });
 document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
 
+/* ── Google Apps Script URL ── */
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyWx0YIBi-Sgv3Q9lAgQRQKSlHznn_GcHQbtj2ABs02PLOuV8mz-1gQ84Y6lQHiPork/exec";
 
+/* ── Generate unique Cockroach ID ── */
+function generateID() {
+  const L = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+  const N = "0123456789";
+  const p1 = Array.from({length:2}, () => L[Math.floor(Math.random()*L.length)]).join("");
+  const p2 = Array.from({length:4}, () => N[Math.floor(Math.random()*N.length)]).join("");
+  return "CJP-BD-" + p1 + p2;
+}
+
+/* ── Round rect helper ── */
+function rr(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x+r, y); ctx.lineTo(x+w-r, y);
+  ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+  ctx.lineTo(x+w, y+h-r);
+  ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+  ctx.lineTo(x+r, y+h);
+  ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+  ctx.lineTo(x, y+r);
+  ctx.quadraticCurveTo(x, y, x+r, y);
+  ctx.closePath();
+}
+
+/* ── Generate real scannable QR and draw onto main canvas ── */
+const CJP_URL = "https://cockroach-jonota-party-bangladesh.github.io/cjpbangladesh/";
+
+function drawQR(ctx, x, y, size, _unused) {
+  return new Promise((resolve) => {
+    // Hidden off-screen div to render QR into
+    const holder = document.createElement("div");
+    holder.style.cssText = "position:fixed;top:-9999px;left:-9999px;width:"+size+"px;height:"+size+"px;";
+    document.body.appendChild(holder);
+
+    new QRCode(holder, {
+      text: CJP_URL,
+      width: size,
+      height: size,
+      colorDark: "#111111",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    // QRCode renders async — wait a tick
+    setTimeout(() => {
+      const qrCanvas = holder.querySelector("canvas");
+      const qrImg    = holder.querySelector("img");
+      if (qrCanvas) {
+        // White rounded bg
+        ctx.fillStyle = "#fff";
+        rr(ctx, x-6, y-6, size+12, size+12, 10); ctx.fill();
+        ctx.strokeStyle = "#e8e8e8"; ctx.lineWidth = 1.5;
+        rr(ctx, x-6, y-6, size+12, size+12, 10); ctx.stroke();
+        ctx.drawImage(qrCanvas, x, y, size, size);
+      } else if (qrImg) {
+        qrImg.onload = () => {
+          ctx.fillStyle = "#fff";
+          rr(ctx, x-6, y-6, size+12, size+12, 10); ctx.fill();
+          ctx.drawImage(qrImg, x, y, size, size);
+          resolve();
+        };
+        document.body.removeChild(holder);
+        return;
+      }
+      document.body.removeChild(holder);
+      resolve();
+    }, 80);
+  });
+}
+
+/* ── Draw logo circle (no emoji — pure canvas shapes) ── */
+function drawLogoCircle(ctx, cx, cy, radius) {
+  // Outer circle
+  ctx.fillStyle = "rgba(255,255,255,0.14)";
+  ctx.beginPath(); ctx.arc(cx, cy, radius, 0, Math.PI*2); ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.42)";
+  ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.arc(cx, cy, radius, 0, Math.PI*2); ctx.stroke();
+
+  // Draw simplified cockroach icon using canvas paths
+  // Body (oval)
+  ctx.fillStyle = "rgba(255,255,255,0.88)";
+  ctx.beginPath();
+  ctx.ellipse(cx, cy + 2, 12, 18, 0, 0, Math.PI*2); ctx.fill();
+  // Head
+  ctx.beginPath();
+  ctx.ellipse(cx, cy - 18, 8, 7, 0, 0, Math.PI*2); ctx.fill();
+  // Antennae
+  ctx.strokeStyle = "rgba(255,255,255,0.88)";
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = "round";
+  ctx.beginPath(); ctx.moveTo(cx-4, cy-22); ctx.quadraticCurveTo(cx-14, cy-34, cx-8, cy-40); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx+4, cy-22); ctx.quadraticCurveTo(cx+14, cy-34, cx+8, cy-40); ctx.stroke();
+  // Legs (3 per side)
+  ctx.lineWidth = 2;
+  [[-1,0],[-1,6],[-1,12],[1,0],[1,6],[1,12]].forEach(([side, offset]) => {
+    const lx = cx + side * 12;
+    const ly = cy - 4 + offset;
+    ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx + side*14, ly + 8); ctx.stroke();
+  });
+}
+
+/* ── MAIN CARD DRAW ── */
+async function drawCard(name, district, role, memberId) {
+  // Standard business card: 3.5" x 2" @ 300dpi = 1050 x 600px
+  const W = 1050, H = 600;
+  const canvas = document.getElementById("id-card-canvas");
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  // ── WHITE BACKGROUND ──
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, W, H);
+
+  // ── WATERMARK (body area only, below header) ──
+  ctx.save();
+  ctx.translate(W/2, H*0.7);
+  ctx.rotate(-Math.PI / 7);
+  ctx.font = "900 48px 'DM Sans', Arial, sans-serif";
+  ctx.fillStyle = "rgba(200,16,46,0.035)";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  [[-320,-100],[-100,-100],[120,-100],[340,-100],
+   [-210,60],[10,60],[230,60],
+   [-320,220],[-100,220],[120,220]].forEach(([wx,wy]) => {
+     ctx.fillText("CJP-BD", wx, wy);
+   });
+  ctx.restore();
+  // Concentric watermark rings
+  ctx.save();
+  ctx.strokeStyle = "rgba(200,16,46,0.04)";
+  ctx.lineWidth = 1.5;
+  [140, 200, 260].forEach(r3 => {
+    ctx.beginPath(); ctx.arc(W*0.62, H*0.72, r3, 0, Math.PI*2); ctx.stroke();
+  });
+  ctx.restore();
+
+  // ── RED HEADER ──
+  const HH = 205; // header height
+  ctx.fillStyle = "#C8102E";
+  ctx.fillRect(0, 0, W, HH);
+  // Decorative circle top-right
+  ctx.save();
+  ctx.fillStyle = "rgba(255,255,255,0.055)";
+  ctx.beginPath(); ctx.arc(W - 60, -70, 280, 0, Math.PI*2); ctx.fill();
+  ctx.restore();
+  // Subtle second circle bottom-left
+  ctx.save();
+  ctx.fillStyle = "rgba(0,0,0,0.07)";
+  ctx.beginPath(); ctx.arc(-40, HH+30, 180, 0, Math.PI*2); ctx.fill();
+  ctx.restore();
+
+  // ── LOGO CIRCLE ──
+  const LCX = 68, LCY = HH / 2;
+  drawLogoCircle(ctx, LCX, LCY, 46);
+
+  // ── HEADER TEXT ──
+  const TX = LCX + 60;
+  ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+  // "OFFICIAL MEMBER CARD"
+  ctx.fillStyle = "rgba(255,255,255,0.52)";
+  ctx.font = "600 19px 'DM Sans', Arial, sans-serif";
+  ctx.fillText("OFFICIAL MEMBER CARD", TX, LCY - 38);
+  // "Cockroach Jonota Party"
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "800 50px 'DM Sans', Arial, sans-serif";
+  ctx.fillText("Cockroach Jonota Party", TX, LCY + 12);
+  // "Bangladesh · Est. 2026"
+  ctx.fillStyle = "rgba(255,255,255,0.42)";
+  ctx.font = "500 22px 'DM Sans', Arial, sans-serif";
+  ctx.fillText("Bangladesh  \u00B7  Est. 2026", TX, LCY + 44);
+
+  // ── CJP-BD TAG top-right ──
+  const TW = 144, TH = 50, TX2 = W - TW - 44, TY2 = 26;
+  ctx.fillStyle = "rgba(255,255,255,0.15)";
+  rr(ctx, TX2, TY2, TW, TH, 8); ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.38)"; ctx.lineWidth = 2;
+  rr(ctx, TX2, TY2, TW, TH, 8); ctx.stroke();
+  ctx.fillStyle = "#fff";
+  ctx.font = "700 22px 'DM Sans', Arial, sans-serif";
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText("CJP\u2013BD", TX2 + TW/2, TY2 + TH/2);
+
+  // ── BODY ──
+  const BY = HH;        // body starts after header
+  const FH = 82;        // footer height
+  const BH = H - HH - FH; // body height = 313
+
+  // QR code — right side
+  const QS = 178; // QR size
+  const QX = W - QS - 52, QY = BY + 28;
+  await drawQR(ctx, QX, QY, QS, "");
+  // "SCAN TO VERIFY" under QR
+  ctx.fillStyle = "#c0c0c0";
+  ctx.font = "600 15px 'DM Sans', Arial, sans-serif";
+  ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+  ctx.fillText("SCAN TO VERIFY", QX + QS/2, QY + QS + 22);
+
+  // Left content area width
+  const LW = QX - 52 - 52; // from x=52 to QX-52
+
+  // "MEMBER NAME" label
+  ctx.fillStyle = "#b0b0b0";
+  ctx.font = "600 17px 'DM Sans', Arial, sans-serif";
+  ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+  ctx.fillText("MEMBER NAME", 52, BY + 58);
+
+  // Name — big bold, uppercase
+  ctx.fillStyle = "#111111";
+  ctx.font = "800 80px 'DM Sans', Arial, sans-serif";
+  // Fit name within left area
+  let nameFontSize = 80;
+  ctx.font = `800 ${nameFontSize}px 'DM Sans', Arial, sans-serif`;
+  while (ctx.measureText(name.toUpperCase()).width > LW && nameFontSize > 36) {
+    nameFontSize -= 2;
+    ctx.font = `800 ${nameFontSize}px 'DM Sans', Arial, sans-serif`;
+  }
+  ctx.fillText(name.toUpperCase(), 52, BY + 148);
+
+  // ── INFO CHIPS ──
+  const chipY = BY + 170;
+  const chipH = 94;
+  const chipGap = 16;
+  // 3 chips share the left width
+  const chipW = (LW - chipGap * 2) / 3;
+
+  const chips = [
+    { label: "DISTRICT", val: district,  green: false },
+    { label: "ROLE",     val: role,       green: true  },
+    { label: "YEAR",     val: "2026",     green: false }
+  ];
+
+  chips.forEach((chip, i) => {
+    const cx = 52 + i * (chipW + chipGap);
+    const cy = chipY;
+    // Chip background
+    ctx.fillStyle = "#f3f3f3";
+    rr(ctx, cx, cy, chipW, chipH, 12); ctx.fill();
+    // Role chip: green outline + black outline
+    if (chip.green) {
+      ctx.strokeStyle = "#006A4E"; ctx.lineWidth = 3;
+      rr(ctx, cx, cy, chipW, chipH, 12); ctx.stroke();
+      ctx.strokeStyle = "rgba(0,0,0,0.12)"; ctx.lineWidth = 1;
+      rr(ctx, cx+1, cy+1, chipW-2, chipH-2, 11); ctx.stroke();
+    }
+    // Label
+    ctx.fillStyle = "#aaaaaa";
+    ctx.font = "600 15px 'DM Sans', Arial, sans-serif";
+    ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+    ctx.fillText(chip.label, cx + 18, cy + 32);
+    // Value
+    ctx.fillStyle = chip.green ? "#006A4E" : "#111111";
+    ctx.font = chip.green
+      ? "800 24px 'DM Sans', Arial, sans-serif"
+      : "700 24px 'DM Sans', Arial, sans-serif";
+    ctx.fillText(chip.val, cx + 18, cy + 72);
+  });
+
+  // ── FOOTER ──
+  const FY = H - FH;
+  ctx.fillStyle = "#111111";
+  ctx.fillRect(0, FY, W, FH);
+
+  // Member ID — gold left
+  ctx.fillStyle = "#E8B84B";
+  ctx.font = "700 28px 'DM Sans', Arial, sans-serif";
+  ctx.textAlign = "left"; ctx.textBaseline = "middle";
+  ctx.fillText(memberId, 52, FY + FH/2);
+
+  // Bangladesh flag — center
+  const FLW = 52, FLH = 32, FLX = W/2 - FLW, FLY = FY + (FH-FLH)/2;
+  ctx.fillStyle = "#006A4E";
+  rr(ctx, FLX, FLY, FLW, FLH, 4); ctx.fill();
+  ctx.fillStyle = "#C8102E";
+  rr(ctx, FLX+FLW, FLY, FLW, FLH, 4); ctx.fill();
+
+  // "Voice of Bangladesh" — right
+  ctx.fillStyle = "rgba(255,255,255,0.32)";
+  ctx.font = "500 19px 'DM Sans', Arial, sans-serif";
+  ctx.textAlign = "right"; ctx.textBaseline = "middle";
+  ctx.fillText("Voice of Bangladesh", W - 52, FY + FH/2);
+}
+
+/* ── Show ID card modal ── */
+async function showIDCard(name, district, role) {
+  const id = generateID();
+  document.getElementById("id-modal").classList.add("show");
+  document.body.style.overflow = "hidden";
+  // Wait for fonts then draw (drawCard is async due to QR)
+  await document.fonts.ready;
+  await drawCard(name, district, role || "Member", id);
+}
+
+/* ── Close modal ── */
+function closeModal() {
+  document.getElementById("id-modal").classList.remove("show");
+  document.body.style.overflow = "";
+}
+function closeModalOutside(e) {
+  if (e.target === document.getElementById("id-modal")) closeModal();
+}
+
+/* ── Download card as PNG ── */
+function downloadCard() {
+  const canvas = document.getElementById("id-card-canvas");
+  const a = document.createElement("a");
+  a.href = canvas.toDataURL("image/png");
+  a.download = "CJP-Member-Card.png";
+  a.click();
+}
+
+/* ── Form submit ── */
 async function handleFormSubmit(e) {
   e.preventDefault();
+
   const btn      = document.getElementById("form-btn");
   const success  = document.getElementById("form-success");
-  const error    = document.getElementById("form-error");
+  const errorDiv = document.getElementById("form-error");
   const form     = document.getElementById("join-form");
-  const name     = document.getElementById("f-name").value.trim();
-  const email    = document.getElementById("f-email").value.trim();
-  const district = document.getElementById("f-district").value;
-  const role     = document.getElementById("f-role").value;
-  const complaint= document.getElementById("f-rant").value.trim();
+
+  const name      = document.getElementById("f-name").value.trim();
+  const email     = document.getElementById("f-email").value.trim();
+  const district  = document.getElementById("f-district").value;
+  const role      = document.getElementById("f-role").value;
+  const complaint = document.getElementById("f-rant").value.trim();
+
   if (!name || !email || !district || !complaint) {
     alert("Please fill in your name, email, district and complaint!");
     return;
   }
-  btn.textContent   = "Sending…";
+
+  btn.textContent   = "Generating your ID card…";
   btn.disabled      = true;
-  btn.style.opacity = "0.7";
+  btn.style.opacity = "0.65";
+
   try {
     await fetch(SCRIPT_URL, {
-      method: "POST",
-      mode:   "no-cors",
-      headers:{ "Content-Type": "application/json" },
-      body:   JSON.stringify({ name, email, district, role, complaint })
+      method:  "POST",
+      mode:    "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ name, email, district, role, complaint })
     });
+
     form.style.display = "none";
     success.classList.add("show");
-    success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    showIDCard(name, district, role || "Member");
+
   } catch (err) {
-    error.style.display  = "block";
-    btn.textContent      = "Enroll in the Movement →";
-    btn.disabled         = false;
-    btn.style.opacity    = "1";
-    error.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    errorDiv.style.display = "block";
+    btn.textContent        = "Enroll in the Movement →";
+    btn.disabled           = false;
+    btn.style.opacity      = "1";
   }
 }
 </script>
